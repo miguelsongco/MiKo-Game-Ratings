@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>MiKo Game Review</title>
+</head>
+<body>
+    <header>
+        <h1>MiKo Game Review <img src="images/gameboy-98.png" class="header-image"/></h1>
+    </header>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="users.html">Users</a>
+        <a href="genre.html">Genre</a>
+        <a href="console.html">Consoles</a>
+    </nav>
+    <section>
+
+      <h2>Game Ratings:</h2>
+      <p>Receives and stores data for the user ratings for games. Ratings are
+        linked to a user and game. Provides a direct way for users to assess game ratings and
+        engagement. This is important to help users find ratings within the DB for the specific
+        game.
+      </p>
+
+        <p><a href="#" onClick="showAllRatings()">Display all ratings</a> </p>
+        <table border="10" cellpadding="10" class="center">
+          <tr>
+            <th><a href="#" onClick="newRating()">New</a></th>
+            <th></th>
+            <th>ratingID</th>
+            <th>userID</th>
+            <th>gameID</th>
+            <th>Rating</th>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateRating('1')">Edit</a></td>
+            <td><a href="#" onclick="deleteRating('1')">Delete</a></td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateRating('2')">Edit</a></td>
+            <td><a href="#" onclick="deleteRating('2')">Delete</a></td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateRating('3')">Edit</a></td>
+            <td><a href="#" onclick="deleteRating('3')">Delete</a></td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateRating('4')">Edit</a></td>
+            <td><a href="#" onclick="deleteRating('4')">Delete</a></td>
+            <td>4</td>
+            <td>4</td>
+            <td>5</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateRating('5')">Edit</a></td>
+            <td><a href="#" onclick="deleteRating('5')">Delete</a></td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>7</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        </div> <!-- browse -->
+        <div id="insert">
+            <form method="POST" id="addRating">
+                <legend><strong>Add Rating</strong></legend>
+                  <fieldset class="fields">
+                    <label> User ID </label> <input type="text" name="userID">
+                    <label> Game ID </label> <input type="text" name="gameID">
+                    <label> Rating </label> <input type="text" name="rating">
+              </fieldset>
+                  <input class="btn" type="submit" id="addRating" value="Add Rating">
+                  <input class="btn" type="button" value="cancel" onClick="browseRatings()">
+          </form> 
+        </div><!-- insert -->
+        <p>&nbsp;</p>
+        <div id="update">
+            <form method="POST" id="UpdateRating">
+                <legend><strong>Update Rating</strong></legend>
+                  <fieldset class="fields">
+                  <input type="hidden" name="ratingID" id="updateratingID" value="1">
+                  <label> ratingID: </label> 1
+                    <label> User ID </label> <input type="text" name="userID" value="1">
+                    <label> Game ID </label> <input type="text" name="gameID" value="3">
+                    <label> Rating </label> <input type="text" name="rating" value="8">
+              </fieldset>
+                  <input class="btn" type="submit" id="UpdateSaveRating" value="Save Update Rating">
+                  <input class="btn" type="button" value="cancel" onClick="browseRatings()">
+          </form> 
+        </div><!-- update -->
+        <p>&nbsp;</p>
+        <div id="delete" style="display: block">
+          <form method="POST" id="deleteRating">
+              <legend><strong>Delete Rating</strong></legend>
+                  <fieldset class="fields">
+                  <p>Are you sure you wish to delete the following?</p>
+                  <input type="hidden" name="ratingID" id="deleteratingID" value="1">
+                  <label><strong>ID:</strong></label> 1
+                    <label> <strong>User ID</strong> </label> 1
+                    <label> <strong>Game ID</strong> </label> 3
+                    <label> <strong>Rating</strong> </label> 8
+            </fieldset>
+            <input class="btn" type="submit" id="DeleteRating" value="Delete Rating">
+                  <input class="btn" type="button" value="cancel" onClick="browseRatings()">
+          </form> 
+        </div><!-- delete -->
+    <footer>
+    </footer>
+</body>
+</html>

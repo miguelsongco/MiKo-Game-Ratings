@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>MiKo Game Review</title>
+</head>
+<body>
+    <header>
+        <h1>MiKo Game Review <img src="images/gameboy-98.png" class="header-image"/></h1>
+    </header>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="users.html">Users</a>
+        <a href="genre.html">Genre</a>
+        <a href="console.html">Consoles</a>
+    </nav>
+    <section>
+
+        <h2>Console Listing:</h2>
+        <p> Represents gaming consoles the specific game can be played. This
+            includes details such as console type and manufacturer. This allows categorization by
+            their compatible consoles and facilitates M:M relationships with users and games.
+        </p>
+        
+        <p><a href="#" onClick="showAllRatings()">Display all consoles</a> </p>
+        <table border="10" cellpadding="10"class="center">
+          <tr>
+            <th><a href="#" onClick="newConsole()">New</a></th>
+            <th></th>
+            <th>consoleID</th>
+            <th>console</th>
+            <th>MANUFACTURER</th>
+            <th>Owned By</th>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateConsole('1')">Edit</a></td>
+            <td><a href="#" onclick="deleteConsole('1')">Delete</a></td>
+            <td align="right">1</td>
+            <td>X Box Series X</td>
+            <td align="right">Microsoft</td>
+            <td>Katie Hernandez</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateConsole('2')">Edit</a></td>
+            <td><a href="#" onclick="deleteConsole('2')">Delete</a></td>
+            <td align="right">2</td>
+            <td>Playstation 5</td>
+            <td align="right">Sony</td>
+            <td>Buster Rollo, Drake Kash</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateConsole('3')">Edit</a></td>
+            <td><a href="#" onclick="deleteConsole('3')">Delete</a></td>
+            <td align="right">3</td>
+            <td>PC</td>
+            <td align="right">Multiple</td>
+            <td>Michael Garcia</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateConsole('4')">Edit</a></td>
+            <td><a href="#" onclick="deleteConsole('4')">Delete</a></td>
+            <td align="right">4</td>
+            <td>Nintendo Switch</td>
+            <td align="right">Nintendo</td>
+            <td>Tranter Ronan</td>
+          </tr>
+          
+        </table>
+
+
+        <p>&nbsp;</p>
+        <div id="insert">
+            <form method="POST" id="addConsole">
+                <legend><strong>Add Console</strong></legend>
+                  <fieldset class="fields">
+                    <label> console type </label> <input type="text" name="consoleTYPE">
+                    <label> manufacturer </label> <input type="text" name="consoleMANUFACTURER">
+              </fieldset>
+                  <input class="btn" type="submit" id="addConsole" value="Add Console">
+                  <input class="btn" type="button" value="cancel" onClick="browseConsoles()">
+            </form> 
+
+        </div>
+        <p>&nbsp;</p>
+        <div id="update">
+            <form method="POST" id="UpdateConsole">
+                <legend><strong>Update Console</strong></legend>
+                  <fieldset class="fields">
+                  <input type="hidden" name="consoleID" id="updateconsoleID" value="1">
+                  <label> ID: </label> 1
+                    <label> console type </label> <input type="text" name="consoleTYPE" value="X Box Series X">
+                    <label> manufacturer </label> <input type="text" name="consoleMANUFACTURER" value="Microsoft">
+              </fieldset>
+                  <input class="btn" type="submit" id="UpdateSaveConsole" value="Save Update Console">
+                  <input class="btn" type="button" value="cancel" onClick="browseConsoles()">
+            </form> 
+
+
+        </div>
+        <p>&nbsp;</p>
+        <div id="delete" style="display: block">
+          <form method="POST" id="deleteConsole">
+              <legend><strong>Delete Console</strong></legend>
+                  <fieldset class="fields">
+                  <p>Are you sure you wish to delete the following?</p>
+                  <input type="hidden" name="consoleID" id="deleteconsoleID" value="1">
+                  <label><strong>ID:</strong></label> 1
+                    <label> <strong>Console Type</strong> </label> X Box Series X
+            </fieldset>
+            <input class="btn" type="submit" id="DeleteConsole" value="Delete Console">
+                  <input class="btn" type="button" value="cancel" onClick="browseConsoles()">
+          </form> 
+
+    
+        </div><!-- delete -->
+          </table>
+    </section>
+        <!-- Sidebar content here -->
+    </aside>
+    <footer>
+    </footer>
+</body>
+</html>

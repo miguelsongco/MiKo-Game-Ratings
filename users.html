@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>MiKo Game Review</title>
+</head>
+<body>
+    <header>
+        <h1>MiKo Game Review <img src="images/gameboy-98.png" class="header-image"/></h1>
+    </header>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="users.html">Users</a>
+        <a href="genre.html">Genre</a>
+        <a href="console.html">Consoles</a>
+    </nav>
+    <section>
+      <h2>User Information:</h2>
+      <p> This contains information about the users using the platform. It also tracks
+        user identifiers and names. Users have the ability to interact with various games and
+        consoles while leaving ratings. This is the central part of user interface and interaction.
+      </p>
+
+        <p><a href="#" onClick="showAllUsers()">Display all users</a> </p>
+        <table border="10" cellpadding="10" class="center">
+          <tr>
+            <th><a href="#" onClick="newUser()">New</a></th>
+            <th></th>
+            <th>userID</th>
+            <th>userName</th>
+            <th>userGames</th>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateUser('1')">Edit</a></td>
+            <td><a href="#" onclick="deleteUser('1')">Delete</a></td>
+            <td align="right">1</td>
+            <td>Tranter Ronan</td>
+            <td>Super Mario Galaxy</td>
+            
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateUser('2')">Edit</a></td>
+            <td><a href="#" onclick="deleteUser('2')">Delete</a></td>
+            <td align="right">2</td>
+            <td>Buster Rollo</td>
+            <td>Dragon's Dogma 2</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateUser('3')">Edit</a></td>
+            <td><a href="#" onclick="deleteUser('3')">Delete</a></td>
+            <td align="right">3</td>
+            <td>Michael Garcia</td>
+            <td>Fallout 4</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateUser('4')">Edit</a></td>
+            <td><a href="#" onclick="deleteUser('4')">Delete</a></td>
+            <td align="right">4</td>
+            <td>Drake Kash</td>
+            <td>God of War: Ragnorok</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateUser('5')">Edit</a></td>
+            <td><a href="#" onclick="deleteUser('5')">Delete</a></td>
+            <td align="right">5</td>
+            <td>Katie Hernandez</td>
+            <td>Halo Infinite</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        </div> <!-- browse -->
+        <div id="insert">
+            <form method="POST" id="addUser">
+                <legend><strong>Add User</strong></legend>
+                  <fieldset class="fields">
+                    <label> User Name </label> <input type="text" name="userName">
+                    <label> User Game </label> <input type="text" name="userName">
+              </fieldset>
+                  <input class="btn" type="submit" id="addUser" value="Add User or User Game">
+                  <input class="btn" type="button" value="cancel" onClick="browseUsers()">
+          </form> 
+        </div><!-- insert -->
+        <p>&nbsp;</p>
+        <div id="update">
+            <form method="POST" id="UpdateUser">
+                <legend><strong>Update User</strong></legend>
+                  <fieldset class="fields">
+                  <input type="hidden" name="userID" id="updateuserID" value="1">
+                  <label> ID: </label> 1
+                    <label> User Name </label> <input type="text" name="userName" value="Drake Kash">
+              </fieldset>
+                  <input class="btn" type="submit" id="UpdateSaveUser" value="Save Update User">
+                  <input class="btn" type="button" value="cancel" onClick="browseUsers()">
+          </form> 
+        </div><!-- update -->
+        <p>&nbsp;</p>
+        <div id="delete" style="display: block">
+          <form method="POST" id="deleteUser">
+              <legend><strong>Delete User</strong></legend>
+                  <fieldset class="fields">
+                  <p>Are you sure you wish to delete the following?</p>
+                  <input type="hidden" name="userID" id="deleteuserID" value="1">
+                  <label><strong>ID:</strong></label> 1
+                    <label> <strong>User Name</strong> </label> Drake Kash
+            </fieldset>
+            <input class="btn" type="submit" id="DeleteUser" value="Delete User">
+                  <input class="btn" type="button" value="cancel" onClick="browseUsers()">
+          </form> 
+        </div><!-- delete -->
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>MiKo Game Review</title>
+</head>
+<body>
+    <header>
+        <h1>MiKo Game Review <img src="images/gameboy-98.png" class="header-image"/></h1>
+    </header>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="users.html">Users</a>
+        <a href="genre.html">Genre</a>
+        <a href="console.html">Consoles</a>
+    </nav>
+
+    <section>
+        <h2>Game Listing:</h2>
+        <p>This entity stores information about each game available on the platform.
+          Each game has a unique identifier, a name, and a release date. This entity is important
+          for tracking all of the games within the system and is integral to the relationships in the
+          database.
+        </p>
+
+        <p><a href="#" onClick="showAllRatings()">Display all games</a> </p>
+          <table border="10" cellpadding="10"class="center">
+            <tr>
+              <th><a href="#" onClick="newGame()">New</a></th>
+              <th></th>
+              <th>gameID</th>
+              <th>Games</th>
+              <th>Release Date</th>
+              <th>Console</th>
+            </tr>
+            <tr>
+              <td><a href="#" onClick="updateGame('1')">Edit</a></td>
+              <td><a href="#" onclick="deleteGame('1')">Delete</a></td>
+              <td>1</td>
+              <td>Fallout 4</td>
+              <td align="right">11/10/15</td>
+              <td align="right">PC</td>
+            </tr>
+            <tr>
+              <td><a href="#" onClick="updateGame('2')">Edit</a></td>
+              <td><a href="#" onclick="deleteGame('2')">Delete</a></td>
+              <td>2</td>
+              <td>Dragon's Dogma 2</td>
+              <td align="right">3/22/24</td>
+              <td align="right">Playstation 5</td>
+            </tr>
+            <tr>
+              <td><a href="#" onClick="updateGame('3')">Edit</a></td>
+              <td><a href="#" onclick="deleteGame('3')">Delete</a></td>
+              <td>3</td>
+              <td>Super Mario Galaxy</td>
+              <td align="right">11/1/07</td>
+              <td align="right">Nintendo Switch</td>
+            </tr>
+            <tr>
+              <td><a href="#" onClick="updateGame('4')">Edit</a></td>
+              <td><a href="#" onclick="deleteGame('4')">Delete</a></td>
+              <td>4</td>
+              <td>Halo Infinite</td>
+              <td align="right">12/8/21</td>
+              <td align="right">Xbox Series X</td>
+            </tr>
+            <tr>
+              <td><a href="#" onClick="updateGame('5')">Edit</a></td>
+              <td><a href="#" onclick="deleteGame('5')">Delete</a></td>
+              <td>5</td>
+              <td>God of War: Ragnarok</td>
+              <td align="right">11/9/22</td>
+              <td align="right">Playstation 5</td>
+            </tr>
+          </table>
+
+          <p>&nbsp;</p>
+
+          
+          </div> <!-- browse -->
+          <div class="colorful-div" id="insert">
+              <form method="POST" id="addGame">
+                  <legend><strong>Add Game</strong></legend>
+                    <fieldset class="fields">
+                      <label> Game Name </label> <input type="text" name="gameNAME">
+                      <label> Release Date </label> <input type="text" name="gameRELEASEDATE">
+                      <label> Console </label> <input type="text" name="gameRELEASEDATE">
+                </fieldset>
+                    <input class="btn" type="submit" id="addGame" value="Add Game">
+                    <input class="btn" type="button" value="cancel" onClick="browseGames()">
+            </form> 
+          </div><!-- insert -->
+
+
+          <p>&nbsp;</p>
+          <div id="update">
+              <form method="POST" id="UpdateGame">
+                  <legend><strong>Update Game</strong></legend>
+                    <fieldset class="fields">
+                    <input type="hidden" name="gameID" id="updategameID" value="1">
+                    <label> ID: </label> 1
+                      <label> Game Name </label> <input type="text" name="gameNAME" value="Fallout 4">
+                      <label> Release Date </label> <input type="text" name="gameRELEASEDATE" value="11/10/15">
+                      <label> Console </label> <input type="text" name="console" value= "Xbox Series X">
+                </fieldset>
+                    <input class="btn" type="submit" id="UpdateSaveGame" value="Save Update Game">
+                    <input class="btn" type="button" value="cancel" onClick="browseGames()">
+            </form> 
+          </div><!-- update -->
+          <p>&nbsp;</p>
+          <div id="delete" style="display: block">
+            <form method="POST" id="deleteGame">
+                <legend><strong>Delete Game</strong></legend>
+                    <fieldset class="fields">
+                    <p>Are you sure you wish to delete the following?</p>
+                    <input type="hidden" name="gameID" id="deletegameID" value="1">
+                    <label>ID:<strong>1</strong></label>
+                      <label>Name:<strong> Fallout 4</strong>
+                      <label>Console:<strong> Xbox Series X</strong>
+
+                        <input class="btn" type="submit" id="DeletePerson" value="Delete Game">
+          <input class="btn" type="button" value="cancel">
+                    
+       </section>
+    <aside>
+    </aside>
+    <footer>
+    </footer>
+</body>
+</html>

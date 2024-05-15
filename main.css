@@ -1,0 +1,214 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&family=Oswald:wght@300;600;700&display=swap');
+
+
+/* ----- Variables ----- */
+:root { 
+  --dark-shade: #101010; 
+  --medium-shade: #FF8C00; 
+  --light-shade: #FFF;
+  --accent-color: #3498DB;
+  --transparent-color: rgba(50, 50, 50, 0.8);
+  --white-color: #F0F0F0;
+  --mario-color: #a92a2a;
+  --green-color: #578466; 
+}
+
+body {      
+  font-family: 'Oswald', sans-serif; 
+  background-image: url('images/game-wallpaper.jpg');
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 990px;
+  color: var(--white-color);
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colorful-div {
+}
+
+/* ----- Page layout blocks ----- */
+header {
+  background-color: var(--dark-shade);
+  color: var(--light-shade);
+  padding: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--white-color);
+  margin: 10px auto; 
+  padding: 20px;
+}
+
+section {
+  background-color: var(--transparent-color);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px; 
+}
+
+/* ----- Navigation ----- */
+nav {
+  text-align: center;
+  background-color: var(--dark-shade);
+  padding: 10px 0; 
+}
+
+nav a {
+  color: var(--mario-color);
+  background-color: transparent;
+  margin: 0 10px; 
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--medium-shade);
+  background-color: var(--green-color);
+}
+
+.local {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; 
+  gap: 10px; 
+  background-color: var(--transparant-shade); 
+  padding: 15px;
+}
+
+.local a {
+  text-decoration: bold;
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  color: var(--dark-shade);
+  border-radius: 30px; 
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.local a:hover {
+  background-color: var(--light-shade);
+  border-color: var(--mario-color); 
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--white-color);
+  text-align:center;
+  font-family:'Nanum Myeongjo', sans-serif;
+} 
+h1 {color: var(--medium-shade);
+  text-align:center;
+  font-family:'Nanum Myeongjo', sans-serif;
+}
+h2 {font-size:28px;}
+h3 {font-size: 24px;}
+h4 {}
+h5 {}
+h6 {}
+
+p {
+  text-align: center;
+}
+/*  ----- Table ----- */
+table {
+  display: center;
+}
+caption {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+div{
+  border-box: var(--mario-color);
+}
+/*  ----- Form ----- */
+form {
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: 5px solid var(--green-color);
+  margin: 20px 0; 
+  padding: 20px;
+  width: auto;
+}
+
+input[type='checkbox'] {
+  display:flexbox;
+  width: auto; 
+  margin-right: 5px;
+}
+
+input[type='radio'] {
+  display:flexbox;
+  width: auto; 
+  margin-right: auto; 
+}
+
+legend {
+}
+
+label {
+  display:block;
+  margin-top: 10px;
+}
+
+button {
+  margin: auto;
+}
+input, select {
+  font-size: 17px;
+  padding: 1%;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px; 
+  margin-bottom: 10px;
+}
+
+:focus {
+  background-color: var(--light-shade);
+
+}
+
+*:required {
+  border: 2px solid var(--light-shade);
+}
+
+input:invalid { 
+   border:3px solid red; 
+} 
+input:valid { 
+   border:2px solid green; 
+}
+
+select {}
+optgroup {}
+option {}
+output {}
+meter {}
+progress {}

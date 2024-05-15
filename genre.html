@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>MiKo Game Review</title>
+</head>
+<body>
+    <header>
+        <h1>MiKo Game Review <img src="images/gameboy-98.png" class="header-image"/></h1>
+    </header>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="users.html">Users</a>
+        <a href="genre.html">Genre</a>
+        <a href="console.html">Consoles</a>
+    </nav>
+    <section>
+      <h2>Genre Listing:</h2>
+      <p>This represents the different genres between games such as action RPG,
+        FPS, strategy, etc. This allows games to be categorized more easily into one or more
+        sections to enhance discovery and navigation on the platform.
+    </p>
+
+        <p><a href="#" onClick="showAllGenres()">Display all genres</a> </p>
+        <table border="10" cellpadding="10" class="center">
+          <tr>
+            <th><a href="#" onClick="newGenre()">New</a></th>
+            <th></th>
+            <th>genreID</th>
+            <th>Genres</th>
+            <th>Games</th>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateGenre('1')">Edit</a></td>
+            <td><a href="#" onclick="deleteGenre('1')">Delete</a></td>
+            <td align="right">1</td>
+            <td>Action RPG</td>
+            <td>Fallout 4</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateGenre('2')">Edit</a></td>
+            <td><a href="#" onclick="deleteGenre('2')">Delete</a></td>
+            <td align="right">2</td>
+            <td>Shooter</td>
+            <td>Halo Infinite</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateGenre('3')">Edit</a></td>
+            <td><a href="#" onclick="deleteGenre('3')">Delete</a></td>
+            <td align="right">3</td>
+            <td>Platform</td>
+            <td>Super Mario Galaxy</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateGenre('4')">Edit</a></td>
+            <td><a href="#" onclick="deleteGenre('4')">Delete</a></td>
+            <td align="right">4</td>
+            <td>Adventure</td>
+            <td>Dragon's Dogma 2</td>
+          </tr>
+          <tr>
+            <td><a href="#" onClick="updateGenre('5')">Edit</a></td>
+            <td><a href="#" onclick="deleteGenre('5')">Delete</a></td>
+            <td align="right">5</td>
+            <td>Fantasy</td>
+            <td>God of War: Ragnarok</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        </div> <!-- browse -->
+        <div id="insert">
+            <form method="POST" id="addGenre">
+                <legend><strong>Add Genre</strong></legend>
+                  <fieldset class="fields">
+                    <label> Genre Name </label> <input type="text" name="genreName">
+              </fieldset>
+                  <input class="btn" type="submit" id="addGenre" value="Add Genre">
+                  <input class="btn" type="button" value="cancel" onClick="browseGenres()">
+          </form> 
+        </div><!-- insert -->
+        <p>&nbsp;</p>
+        <div id="update">
+            <form method="POST" id="UpdateGenre">
+                <legend><strong>Update Genre</strong></legend>
+                  <fieldset class="fields">
+                  <input type="hidden" name="genreID" id="updategenreID" value="1">
+                  <label> ID: </label> 1
+                    <label> Genre Name </label> <input type="text" name="genreName" value="Action RPG">
+              </fieldset>
+                  <input class="btn" type="submit" id="UpdateSaveGenre" value="Save Update Genre">
+                  <input class="btn" type="button" value="cancel" onClick="browseGenres()">
+          </form> 
+        </div><!-- update -->
+        <p>&nbsp;</p>
+        <div id="delete" style="display: block">
+          <form method="POST" id="deleteGenre">
+              <legend><strong>Delete Genre</strong></legend>
+                  <fieldset class="fields">
+                  <p>Are you sure you wish to delete the following?</p>
+                  <input type="hidden" name="genreID" id="deletegenreID" value="1">
+                  <label><strong>ID:</strong></label> 1
+                    <label> <strong>Genre Name</strong> </label> Action RPG
+            </fieldset>
+            <input class="btn" type="submit" id="DeleteGenre" value="Delete Genre">
+                  <input class="btn" type="button" value="cancel" onClick="browseGenres()">
+          </form> 
+        </div><!-- delete -->
+    <footer>
+    </footer>
+</body>
+</html>
